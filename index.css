@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    background-color:white;
+}
+
+/* ..............navbar.................. */
+
+.navbar-container{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    background-color:white;
+    transition: background-color 0.3s ease;
+}
+.navbar-container.scrolled {
+    background-color: white; /* New color on scroll */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #39aab0;
+}
+
+.navlogo-section{
+    width: auto;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blueviolet; */
+}
+.navlogo-section img{
+    width: 200px;
+}
+.navbar-container label {
+    display: none;
+
+}
+#checking{
+    display: none;
+}
+.navbar-container label {
+    display: none;
+}
+
+.nav-items {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: color 0.3s ease;
+}
+.navbar-container.scrolled .nav-items a{
+    color:black; /* Custom text color inside navbar on scroll */
+}
+.nav-items a{
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-items a:hover{
+    /* color: rgb(45,42,99); */
+    text-decoration:overline 2px solid white;
+}
+.nav-items button{
+    width: 200px;
+    border-radius: 25px;
+    height: 50px;
+    background-color: black;
+    color:rgb(255,190,46);
+    font-size: 1rem;
+    border: none;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* ..............banner................. */
+
+
+.banner {
+    width: 100%;
+    height: 87.5vh;
+    background-image: url("alwarqa-images/DeWatermark.jpg");
+    background-size: 100vw 87.5vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 6%;
+    padding-right: 55%;
+    gap: 15px;
+    background-repeat: no-repeat;
+}
+.banner h1{
+    font-size: 3.5rem;
+    font-family: "Mako", sans-serif;
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+.banner span{
+    font-size: 4rem;
+}
+.banner p{
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    animation: moveUpDown 4s ease-in-out infinite;
+}
+.banner button{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    animation: moveUpDown 6s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+
+  /* .............about................. */
+
+.about-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 2%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.about-container img{
+    width: 700px;
+    height: 600px;
+    animation: moveLeftRight 4s ease-in-out infinite;
+    /* background-color: aqua; */
+}
+
+@keyframes moveLeftRight {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(100px); } /* Move right */
+    100% { transform: translateX(0); }     /* Back to start */
+}
+
+.about-cont{
+    width: 40%;
+    height: auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: aliceblue; */
+    margin-top: 5%;
+}
+.about-cont h2{
+    font-size: 3rem;
+    font-family: "Mako", sans-serif;
+}
+.about-cont p{
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+.about-cont span{
+   color:rgb(255,190,46) ; 
+}
+.about-cont button{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 1rem;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    background-color:rgb(255,190,46) ;
+}
+
+
+/* ....................why.............. */
+
+.why-container{
+    width: 100%;
+    padding: 5%;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* background-color: beige; */
+    gap: 20px;
+}
+.why{
+    width: 100%;
+    height: 300px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    /* background-color: black; */
+    gap: 5px;
+}
+.why img{
+    width: 60px;
+}
+.why h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: "Mako", sans-serif;
+}
+.why p{
+    font-size: 1.2rem;
+    font-family: "Poppins", sans-serif;
+    color:black;
+}
+
+
+
+/* ..............services................... */
+
+.servicepage-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255,190,46);
+}
+
+.service-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.service-title span{
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    /* color:rgb(255,190,46); */
+    margin-top: 5%;
+    text-transform: uppercase;
+    color: white;
+}
+.service-title h2{
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    font-family: "Mako", sans-serif;
+    margin-bottom: 2%;
+
+}
+.service-container{
+    width: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.services{
+    width: 100%;
+    height: 300px;
+    padding: 5%;
+    border: 3px solid white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+}
+.services img{
+    width: 60px;
+}
+
+.services h3{
+    font-size: 1.8rem;
+    font-family: "Mako", sans-serif;
+}
+.services p{
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
